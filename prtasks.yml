@@ -1,0 +1,16 @@
+---
+- name: test pre and post
+  hosts: all
+  ignore_errors: yes
+  pre_tasks:
+      - name: pretask patching excution
+        debug:
+          msg: "pretask excution"
+  tasks:
+      - name: patching tasks excution
+        debug:
+          msg: "tasks excution"
+  post_tasks:
+      - name: post patching excution
+        debug:
+          msg: "post tasks excution"
